@@ -11,34 +11,40 @@
                 background-size: cover;
                 height: 100vh;
                 display: flex;
-                flex-direction: column; /* stack items vertically */
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 color: white;
                 font-family: Arial, sans-serif;
                 text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             }
+
             h1 {
                 font-size: 3em;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 text-align: center;
             }
-            h2 {
-                margin-top: 0;
-            }
-            h2 a {
-                font-size: 2em;
-                color: #ffdd57;
+
+            .login-btn {
+                background-color: #1e90ff;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 8px;
+                font-size: 1.5em;
+                font-weight: bold;
                 text-decoration: none;
-                transition: color 0.3s ease;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+                transition: background-color 0.3s ease;
             }
-            h2 a:hover {
-                color: #ffffff;
+
+            .login-btn:hover {
+                background-color: #0073e6;
             }
         </style>
     </head>
     <body>
         <h1>Welcome to the Recipe Home Page!</h1>
-        <h2><a href="/recipes/list">Recipes</a></h2>
+        <a href="{% url 'login' %}" class="login-btn">Login</a>
     </body>
 </html>
