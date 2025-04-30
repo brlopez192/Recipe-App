@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <title>Recipe Home</title>
-<body>
-    Welcome to the Recipe Home Page!
-</body>
+    {% load static %}
+    <head>
+        <title>Recipe Home</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: url("{% static 'recipes/images/recipes.jpg' %}") no-repeat center center fixed;
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                flex-direction: column; /* stack items vertically */
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-family: Arial, sans-serif;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            }
+            h1 {
+                font-size: 3em;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            h2 {
+                margin-top: 0;
+            }
+            h2 a {
+                font-size: 2em;
+                color: #ffdd57;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            h2 a:hover {
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to the Recipe Home Page!</h1>
+        <h2><a href="/recipes/list">Recipes</a></h2>
+    </body>
 </html>
