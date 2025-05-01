@@ -137,5 +137,6 @@ LOGIN_URL = '/login/'
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(a2-ve-recipeapp)
+db_from_env = dj_database_url.config(default='postgres://localhost/mydb')  # Default to a local database if the env variable isn't set
+DATABASES['default'].update(db_from_env)
+
