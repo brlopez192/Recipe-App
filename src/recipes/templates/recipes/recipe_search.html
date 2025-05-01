@@ -96,8 +96,10 @@
         {% if recipe_df %}
             {{ recipe_df|safe }}
             <br>
-            <img src="data:image/png;base64,{{ chart|safe }}">
-        {% else %}
+            <a href="data:image/png;base64,{{ chart|safe }}" target="_blank">
+                <img src="data:image/png;base64,{{ chart|safe }}" alt="Chart">
+            </a>
+                    {% else %}
             <h3>No Data Found</h3>
         {% endif %}
     </div>
