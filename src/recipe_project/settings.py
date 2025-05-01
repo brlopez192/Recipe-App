@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-ml49cp(e)=yakp
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://glacial-springs-13687-63240edcae9f.herokuapp.com',
+    '*',
 ]
 
 heroku_host = os.environ.get('HEROKU_HOSTNAME')
