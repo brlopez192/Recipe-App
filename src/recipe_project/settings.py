@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-ml49cp(e)=yakp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['glacial-springs-13687.herokuapp.com']
+ALLOWED_HOSTS = ['glacial-springs-13687-63240edcae9f.herokuapp.com']
 
 heroku_host = os.environ.get('HEROKU_HOSTNAME')
 if heroku_host:
