@@ -47,6 +47,10 @@ def add_recipe(request):
     return render(request, 'recipes/add_recipe.html', {'form': form})
 
 
+def about_me(request):
+    return render(request, 'recipes/about_me.html')
+
+
 class RecipeListView(LoginRequiredMixin, ListView):
     model = Recipe
     template_name = 'recipes/recipe_list.html'
