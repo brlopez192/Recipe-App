@@ -17,7 +17,7 @@ def login_view(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('recipes:recipe_list')
+            return redirect('recipes:home')
         else:
             error_message = 'Oops! something went wrong.'
 
