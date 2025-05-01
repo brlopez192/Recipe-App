@@ -30,7 +30,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['glacial-springs-13687.herokuapp.com']
 
-
+heroku_host = os.environ.get('HEROKU_HOSTNAME')
+if heroku_host:
+    ALLOWED_HOSTS.append(heroku_host)
 # Application definition
 
 INSTALLED_APPS = [
